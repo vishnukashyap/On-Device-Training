@@ -6,5 +6,6 @@ config.yaml contains all the values of the training parameters
 Both standard training and training using the method described in the paper are present in train.py.
 
 To run start the training, the command is:
-  python train.py --training_type <training type>
+  python train.py --training_type training type value
+
 The training type can take value as standard or eif_emp
