@@ -1,0 +1,54 @@
+# This file contains the configuration for the training #
+
+# dataset_type: this indicates the types of datasets that the model can be trained on #
+# the datasets which can be included here are CIFAR100 and CIFAR10 #
+dataset_name : "CIFAR100"
+
+# dataset_dir: this is the path to the directory that contains the dataset #
+dataset_dir : "../../../Dataset/CIFAR100"
+
+# batch_size: the batch size for training the model #
+batch_size : 5
+
+# device: the device on which the training is supposed to take place #
+device : "cuda"
+
+# epochs: the total number of epochs that the model is to be trained for #
+epochs : 20
+
+# main_network_checkpoint_path: the saved checkpoint of the main_network from where training can be restarted
+main_network_checkpoint_path : "weights/Standard_Epoch_19_16_26_2022_06_25.pth"
+
+# eif_checkpoint_path: the saved checkpoint of the eif_network from where training can be restarted
+eif_checkpoint_path : null
+
+# lr: the learning rate of for training #
+lr : 0.001
+
+# momentume: the momentum for the training optimizer #
+momentum : 0.9
+
+# optimizer_type: the optimizer to be used during training #
+# the optimizer_type indicates the type of optimizer to be used during training
+# the optimizer_type can take values : SGD, Adam, NAdam
+optimizer_type : "SGD"
+
+# lr_scheduler: whether to use a lr_scheduler or not
+# a value of null indicates not to use an lr_scheduler
+# otherwise lr_scheduler can take values
+lr_scheduler : null
+
+# train_val_split: train and validation split
+train_val_split: 0.8
+
+# num_workers: number of workers for reading from dataset
+num_workers : 4
+
+# weight_decay: the weight decay value to be applied during the weight updation
+weight_decay: 0.001
+
+# checkpoint_path : path to save checkpoint
+checkpoint_path : "weights"
+
+# checkpoint_save_interval: number of epochs after which an epoch should be saved
+checkpoint_save_interval : 19
